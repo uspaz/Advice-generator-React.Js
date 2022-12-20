@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  color: #fff;
+}
+
+.advice-generator {
+  width: 31.25rem;
+  max-width: 31.25rem;
+  padding: 2.5rem;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 0.625rem;
+  text-align: center;
+  position: relative;
+}
+
+.advice-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.advice-texts p {
+  color: hsl(150, 100%, 66%);
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.advice-texts h3 {
+  font-size: 1.75rem;
+}
+
+.advice-decoration {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.advice-decoration div:nth-child(1),
+.advice-decoration div:nth-child(4) {
+  width: 50%;
+  border-bottom: 1px solid hsl(217, 19%, 38%);
+}
+
+.advice-decoration div:nth-child(2),
+.advice-decoration div:nth-child(3) {
+  width: 12px;
+  height: 1.5625rem;
+  background-color: hsl(193, 38%, 86%);
+  border-radius: 10px;
+}
+
+.btn-dices {
+  position: absolute;
+  bottom: -30px;
+  left: 218px;
+  padding: 1.25rem;
+  border-radius: 100%;
+  background-color: hsl(150, 100%, 66%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-dices:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 30px hsl(150, 100%, 66%);
+}
+
+@media only screen and (max-width: 500px) {
+  .advice-generator {
+    width: 375px;
+    max-width: 375px;
+  }
+  .btn-dices {
+    left: 155px;
+  }
+}
