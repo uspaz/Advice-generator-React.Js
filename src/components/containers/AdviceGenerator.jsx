@@ -11,7 +11,7 @@ const AdviceGenerator = () => {
   let api = helpHttp();
   let url = "https://api.adviceslip.com/advice";
 
-  useEffect(() => {
+  const fetchAdvice = () => {
     setLoading(true);
 
     api.get(url).then((res) => {
@@ -24,22 +24,15 @@ const AdviceGenerator = () => {
     });
 
     setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchAdvice();
   }, []);
 
   const handleGenerateAdvice = (e) => {
     e.preventDefault();
-    setLoading(true);
-
-    api.get(url).then((res) => {
-      if (!res.err) {
-        setAdvice(res);
-      } else {
-        setAdvice({});
-        alert("Ha ocurridó un error");
-      }
-    });
-
-    setLoading(false);
+    fetchAdvice();
   };
 
   return (
